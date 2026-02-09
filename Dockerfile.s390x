@@ -1,4 +1,4 @@
-FROM alpine as builder
+FROM docker-na-public.artifactory.swg-devops.com/hyc-cloud-private-dockerhub-docker-remote/alpine:latest as builder
 
 RUN wget -O /qemu-s390x-static https://github.com/multiarch/qemu-user-static/releases/download/v7.2.0-1/qemu-s390x-static
 
