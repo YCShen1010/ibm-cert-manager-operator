@@ -40,7 +40,7 @@ else
 	REGISTRY ?= "docker-na-public.artifactory.swg-devops.com/hyc-cloud-private-scratch-docker-local/ibmcom"
 endif
 
-QEMU_REGISTRY ?= "docker-na-public.artifactory.swg-devops.com/hyc-cloud-private-dockerhub-docker-remote/"
+QEMU_REGISTRY ?= "docker-na-public.artifactory.swg-devops.com/hyc-cloud-private-dockerhub-docker-remote"
 
 VCS_REF ?= $(shell git rev-parse HEAD)
 
@@ -235,7 +235,7 @@ build-image-ppc64le: $(CONFIG_DOCKER_TARGET) build-ppc64le
 		-f Dockerfile.ppc64le .
 
 build-image-s390x: $(CONFIG_DOCKER_TARGET) build-s390x
-	@docker run --rm --privileged $(QEMU_REGISTRY)//multiarch/qemu-user-static:register --reset
+	@docker run --rm --privileged $(QEMU_REGISTRY)/multiarch/qemu-user-static:register --reset
 	@docker build -t $(REGISTRY)/$(IMG)-s390x:$(VERSION) \
 		--build-arg VCS_REF=$(VCS_REF) \
 		-f Dockerfile.s390x .
