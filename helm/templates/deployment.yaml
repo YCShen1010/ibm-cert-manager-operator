@@ -78,13 +78,13 @@ spec:
             - name: OPERATOR_NAME
               value: "ibm-cert-manager-operator"
             - name: ICP_CERT_MANAGER_CONTROLLER_IMAGE
-              value: {{ .Values.cpfs.imagePullPrefix | default .Values.global.imagePullPrefix }}/{{ .Values.cpfs.imageRegistryNamespaceOperand}}/icp-cert-manager-controller:4.2.20-jetstack.1.13.3
+              value: {{ .Values.cpfs.imagePullPrefix | default .Values.global.imagePullPrefix }}/{{ .Values.cpfs.imageRegistryNamespaceOperand}}/icp-cert-manager-controller:4.2.20-jetstack.1.18.5
             - name: ICP_CERT_MANAGER_WEBHOOK_IMAGE
-              value: {{ .Values.cpfs.imagePullPrefix | default .Values.global.imagePullPrefix }}/{{ .Values.cpfs.imageRegistryNamespaceOperand}}/icp-cert-manager-webhook:4.2.20-jetstack.1.13.3
+              value: {{ .Values.cpfs.imagePullPrefix | default .Values.global.imagePullPrefix }}/{{ .Values.cpfs.imageRegistryNamespaceOperand}}/icp-cert-manager-webhook:4.2.20-jetstack.1.18.5
             - name: ICP_CERT_MANAGER_CAINJECTOR_IMAGE
-              value: {{ .Values.cpfs.imagePullPrefix | default .Values.global.imagePullPrefix }}/{{ .Values.cpfs.imageRegistryNamespaceOperand}}/icp-cert-manager-cainjector:4.2.20-jetstack.1.13.3
+              value: {{ .Values.cpfs.imagePullPrefix | default .Values.global.imagePullPrefix }}/{{ .Values.cpfs.imageRegistryNamespaceOperand}}/icp-cert-manager-cainjector:4.2.20-jetstack.1.18.5
             - name: ICP_CERT_MANAGER_ACMESOLVER_IMAGE
-              value: {{ .Values.cpfs.imagePullPrefix | default .Values.global.imagePullPrefix }}/{{ .Values.cpfs.imageRegistryNamespaceOperand}}/icp-cert-manager-acmesolver:4.2.20-jetstack.1.13.3
+              value: {{ .Values.cpfs.imagePullPrefix | default .Values.global.imagePullPrefix }}/{{ .Values.cpfs.imageRegistryNamespaceOperand}}/icp-cert-manager-acmesolver:4.2.20-jetstack.1.18.5
           resources:
             limits:
               cpu: 100m
